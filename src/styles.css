@@ -123,15 +123,19 @@ img.socialIcon {
   height: 30px;
   width: 30px;
 }
-.container .box img.socialIcon {
-  animation: spin 2s linear infinite;
+img.socialIcon:hover {
+  animation: bounce 0.5s;
+  animation-iteration-count: infinite;
 }
 
-@keyframes spin {
+@keyframes bounce {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
   }
   100% {
-    transform: rotate(360deg);
+    transform: scale(1);
   }
 }
